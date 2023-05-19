@@ -10,7 +10,7 @@ SELECT @sql = @sql +
     CHAR(13) + CHAR(10) +
     '    ' + 'public ' +
     CASE 
-        WHEN DATA_TYPE IN ('char', 'varchar', 'nchar', 'nvarchar', 'text', 'ntext') THEN 'string' + ' ' +
+        WHEN DATA_TYPE IN ('char', 'varchar', 'nchar', 'nvarchar', 'text', 'ntext') THEN 'string?' + ' ' +
     '' + COLUMN_NAME + '' + ' { get; set; }'
         ELSE 
             CASE 
@@ -49,5 +49,5 @@ SELECT @sql = @sql +
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = @tableName;
 
-set @sql = @sql +  CHAR(13) + CHAR(10) + '}';
+set @sql = @sql + '}';
 PRINT(@sql)
