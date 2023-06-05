@@ -2,7 +2,7 @@
 --FROM INFORMATION_SCHEMA.COLUMNS
 --WHERE TABLE_NAME = N'Products' AND TABLE_SCHEMA = 'dbo'
 
-DECLARE @tableName NVARCHAR(128) = 'Products'; -- Replace with your table name
+DECLARE @tableName NVARCHAR(128) = 'Employees'; -- Replace with your table name
 
 DECLARE @sql NVARCHAR(MAX) = 'public class ' + @tableName +  CHAR(13) + CHAR(10) +'{' ;
 
